@@ -1,0 +1,41 @@
+{% extends "nav.html" %}
+{% block title %}
+LuxyMarble
+{% endblock title %}
+{% block form %}
+    {% comment %} <h1 data-aos="fade-up "class="pt-3">Signup</h1> {% endcomment %}
+    <form action="" method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="fullName" class="form-label">Username</label>
+            <input type="text" class="form-control" id="fullName" name="username" required>
+        </div>
+        <div class="mb-3">
+            <label for="fistname" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="fullName" name="firstname" required>
+        </div> 
+        <div class="mb-3">
+            <label for="lastname" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="fullName" name="lastname" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" name="password1" required>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Confirm Password</label>
+            <input type="password" class="form-control" id="password" name="password2" required>
+        </div>
+        <div class="">
+            <small><i>Alredy Register</i></small>
+            <a href="{% url 'Login' %}">Login</a>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Sign Up</button>
+    </form>
+{% endblock form %}
+
